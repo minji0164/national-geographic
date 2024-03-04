@@ -1,0 +1,66 @@
+#intro {
+  background-image: url(../../images/main/intro.png);
+  background-position: 50% 75%;
+  object-fit: cover;
+
+  .txt-box .tit {
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .txt-box {
+    text-align: center;
+    @include posXY;
+    width: 100%;
+  }
+
+  .tit {
+    @include intro-tit;
+    position: relative;
+    animation: text 3s 1;
+  }
+
+  em {
+    color: $primary;
+  }
+
+  @keyframes text {
+    0% {
+      color: #000;
+      margin-bottom: -30px;
+    }
+
+    30% {
+      letter-spacing: 25px;
+      margin-bottom: -30px;
+    }
+
+    85% {
+      letter-spacing: 8px;
+      margin-bottom: -30px;
+    }
+  }
+}
+
+#panel-1 {
+  .sec-brd {
+    width: 100%;
+  }
+  .row {
+    height: 100%;
+    width: 100%;
+  }
+  .flex-column {
+    height: 100%;
+    width: 100%;
+  }
+  .vd {
+    object-fit: cover;
+    position: relative;
+  }
+  .txt-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
