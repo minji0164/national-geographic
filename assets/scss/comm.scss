@@ -71,6 +71,7 @@
   display: flex;
   text-align: left;
 }
+// #panels #panels-container
 #panels #panels-container .panel img {
   max-width: 100%;
   display: block;
@@ -137,7 +138,79 @@
   }
 }
 //---------------------------------------------------------------------------------
-#main {
+#content {
+  ::selection {
+    background-color: $primary; // 선택한 텍스트의 배경색을 빨간색으로 설정
+    color: $txtDefult-b;
+  }
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 23px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 1px solid $txtDefult-w;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+  }
+
+  .btn.btn-border-1::after,
+  .btn.btn-border-1::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+  }
+
+  .btn.btn-border-1::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+    transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+  }
+
+  .btn.btn-border-1::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid $primary;
+    border-right: 1px solid $primary;
+    transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+  }
+
+  .btn.btn-border-1:hover {
+    animation: pulse 1s ease-out 0.4s;
+    color: $primary;
+  }
+
+  .btn.btn-border-1:hover::after,
+  .btn.btn-border-1:hover::before {
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    visibility: visible;
+    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+  }
+
+  .btn.btn-border-1:hover::after {
+    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+  }
+
+  .btn.btn-border-1:hover::before {
+    transition: width 0.1s ease, height 0.1s ease 0.1s;
+  }
+  .more-btn {
+    width: 170px;
+  }
+  .ico {
+    font-size: 20px;
+  }
 }
 //---------------------------------------------------------------------------------
 #footer {
