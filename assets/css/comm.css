@@ -126,7 +126,7 @@ body {
   line-height: 1.5;
   font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #fff;
-  background: #000;
+  background: #0a0a0a;
 }
 
 button {
@@ -415,6 +415,77 @@ legend {
   color: #ffcc00;
 }
 
+#content ::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+#content ::selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+#content .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 23px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+#content .btn.btn-border-1::after,
+#content .btn.btn-border-1::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  visibility: hidden;
+}
+#content .btn.btn-border-1::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: 1px solid #ffcc00;
+  border-bottom: 1px solid #ffcc00;
+  transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+}
+#content .btn.btn-border-1::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid #ffcc00;
+  border-right: 1px solid #ffcc00;
+  transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+}
+#content .btn.btn-border-1:hover {
+  animation: pulse 1s ease-out 0.4s;
+  color: #ffcc00;
+}
+#content .btn.btn-border-1:hover::after,
+#content .btn.btn-border-1:hover::before {
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  visibility: visible;
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+#content .btn.btn-border-1:hover::after {
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+#content .btn.btn-border-1:hover::before {
+  transition: width 0.1s ease, height 0.1s ease 0.1s;
+}
+#content .more-btn {
+  width: 170px;
+}
+#content .ico {
+  font-size: 20px;
+}
+
 #intro {
   background-image: url(../../images/main/intro.png);
   background-position: 50% 75%;
@@ -502,70 +573,72 @@ legend {
   margin-top: 30px;
   width: 368px;
 }
-#panel-1 .btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 13px 23px;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  border: 1px solid #fff;
-  cursor: pointer;
-  transition: ease-out 0.5s;
-  -webkit-transition: ease-out 0.5s;
-  -moz-transition: ease-out 0.5s;
-}
-#panel-1 .btn.btn-border-1::after,
-#panel-1 .btn.btn-border-1::before {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 0%;
-  visibility: hidden;
-}
-#panel-1 .btn.btn-border-1::after {
-  bottom: -1px;
-  right: -1px;
-  border-left: 1px solid #ffcc00;
-  border-bottom: 1px solid #ffcc00;
-  transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
-}
-#panel-1 .btn.btn-border-1::before {
-  top: -1px;
-  left: -1px;
-  border-top: 1px solid #ffcc00;
-  border-right: 1px solid #ffcc00;
-  transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
-}
-#panel-1 .btn.btn-border-1:hover {
-  animation: pulse 1s ease-out 0.4s;
-  color: #ffcc00;
-}
-#panel-1 .btn.btn-border-1:hover::after,
-#panel-1 .btn.btn-border-1:hover::before {
-  width: calc(100% + 1px);
-  height: calc(100% + 1px);
-  visibility: visible;
-  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
-}
-#panel-1 .btn.btn-border-1:hover::after {
-  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
-}
-#panel-1 .btn.btn-border-1:hover::before {
-  transition: width 0.1s ease, height 0.1s ease 0.1s;
-}
-#panel-1 .more-btn {
-  width: 170px;
-}
-#panel-1 .ico {
-  font-size: 20px;
-}
 #panel-1 .brand-img {
   width: 600px;
   height: 330px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#panels #panels-container #panel-2 {
+  display: block;
+}
+
+#panel-2 {
+  background: #0a0a0a;
+}
+#panel-2 .txt-btn-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 188px;
+}
+#panel-2 .mini-tit {
+  color: #ffcc00;
+}
+#panel-2 .tit {
+  margin-top: 10px;
+}
+#panel-2 .tit span {
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: normal;
+}
+#panel-2 .con {
+  margin-top: 30px;
+  width: 368px;
+}
+#panel-2 .works {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+#panel-2 .works .ul-right {
+  padding-left: 4px;
+}
+#panel-2 .works li {
+  padding: 2px 0;
+}
+#panel-2 .works .w-a {
+  position: relative;
+}
+#panel-2 .works img {
+  opacity: 0.6;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 500px;
+  height: 300px;
+}
+#panel-2 .works .txt-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }/*# sourceMappingURL=comm.css.map */
