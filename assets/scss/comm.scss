@@ -69,12 +69,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #333;
   text-align: left;
 }
 #panels #panels-container .panel img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 #panels #panels-container .panel .panels-navigation {
@@ -90,13 +88,13 @@
 #panels #panels-container .panel .nav-panel {
   color: #000;
   text-transform: uppercase;
-  margin-right: 2rem;
+  margin-right: 80px;
+  margin-bottom: 2rem;
 }
 #panels #panels-container .panels-navigation {
   position: absolute;
   width: 100%;
   bottom: 2rem;
-  right: 2rem;
 }
 
 #masthead {

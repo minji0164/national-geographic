@@ -352,13 +352,11 @@ legend {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  color: #333;
   text-align: left;
 }
 
 #panels #panels-container .panel img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -372,14 +370,14 @@ legend {
 #panels #panels-container .panel .nav-panel {
   color: #000;
   text-transform: uppercase;
-  margin-right: 2rem;
+  margin-right: 80px;
+  margin-bottom: 2rem;
 }
 
 #panels #panels-container .panels-navigation {
   position: absolute;
   width: 100%;
   bottom: 2rem;
-  right: 2rem;
 }
 
 #masthead {
@@ -474,8 +472,100 @@ legend {
      object-fit: cover;
   position: relative;
 }
-#panel-1 .txt-box {
+#panel-1 .box {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#panel-1 .txt-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+#panel-1 .mini-tit {
+  color: #ffcc00;
+}
+#panel-1 .tit {
+  margin-top: 10px;
+}
+#panel-1 .tit span {
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: normal;
+}
+#panel-1 .con {
+  margin-top: 30px;
+  width: 368px;
+}
+#panel-1 .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 23px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+#panel-1 .btn.btn-border-1::after,
+#panel-1 .btn.btn-border-1::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  visibility: hidden;
+}
+#panel-1 .btn.btn-border-1::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: 1px solid #ffcc00;
+  border-bottom: 1px solid #ffcc00;
+  transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+}
+#panel-1 .btn.btn-border-1::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid #ffcc00;
+  border-right: 1px solid #ffcc00;
+  transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+}
+#panel-1 .btn.btn-border-1:hover {
+  animation: pulse 1s ease-out 0.4s;
+  color: #ffcc00;
+}
+#panel-1 .btn.btn-border-1:hover::after,
+#panel-1 .btn.btn-border-1:hover::before {
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  visibility: visible;
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+#panel-1 .btn.btn-border-1:hover::after {
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+#panel-1 .btn.btn-border-1:hover::before {
+  transition: width 0.1s ease, height 0.1s ease 0.1s;
+}
+#panel-1 .more-btn {
+  width: 170px;
+}
+#panel-1 .ico {
+  font-size: 20px;
+}
+#panel-1 .brand-img {
+  width: 600px;
+  height: 330px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=comm.css.map */
