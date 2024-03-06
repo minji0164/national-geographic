@@ -578,6 +578,11 @@ legend {
   height: 330px;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out;
+}
+#panel-1 .brand-img:hover {
+  filter: grayscale(0);
 }
 
 #panels #panels-container #panel-2 {
