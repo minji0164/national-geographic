@@ -106,3 +106,12 @@
   font-size: 60px;
   font-weight: 700;
 }
+
+@mixin md-tit {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+@mixin kate {
+  font-size: 12px;
+}

@@ -45,7 +45,3 @@ tween = gsap.to(panels, {
     end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
   },
 });
-
-AOS.init({
-  duration: 800,
-});

@@ -1,3 +1,6 @@
+#panels #panels-container .panel .intro-next {
+  justify-content: flex-end;
+}
 #intro {
   background-image: url(../../images/main/intro.png);
   background-position: 50% 75%;
@@ -132,37 +135,59 @@
   }
 
   .works {
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
     display: flex;
+    gap: 4px;
 
-    .ul-right {
-      padding-left: 4px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
-    li {
-      padding: 2px 0;
-    }
     .w-a {
       position: relative;
+
+      &:hover {
+        .txt-wrap {
+          color: $txt-op-h;
+        }
+        img {
+          opacity: 0.8;
+        }
+      }
     }
 
     img {
       opacity: 0.6;
       object-fit: cover;
       width: 500px;
-      height: 300px;
+      height: 304px;
+      transition: opacity 0.3s;
     }
 
     .txt-wrap {
       display: flex;
       flex-direction: column;
       gap: 5px;
-      padding: 20px 30px;
+      padding: 30px 40px;
       position: absolute;
       left: 0;
       bottom: 0;
+      color: $txt-op;
+      transition: all 0.3s;
+
+      .kate {
+        @include kate;
+      }
+
+      .tit {
+        margin-top: 5px;
+        @include md-tit;
+      }
     }
   }
 }

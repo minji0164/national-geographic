@@ -1,15 +1,18 @@
 @import "variables", "fonts", "mixins", "reset";
 //---------------------------------------------------------------------------------
-.wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: none;
-  margin: 0 auto;
+// .wrap {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   max-width: none;
+//   margin: 0 auto;
 
-  ::selection {
-    background-color: $primary; // 선택한 텍스트의 배경색을 빨간색으로 설정
-  }
+//   ::selection {
+//     background-color: $primary; // 선택한 텍스트의 배경색을 빨간색으로 설정
+//   }
+// }
+body {
+  overflow-x: hidden;
 }
 //---------------------------------------------------------------------------------
 .inner,
@@ -90,12 +93,23 @@
   color: #000;
   text-transform: uppercase;
   margin-right: 80px;
-  margin-bottom: 2rem;
+  margin-left: 80px;
+  // margin-bottom: 2rem;
 }
 #panels #panels-container .panels-navigation {
   position: absolute;
   width: 100%;
   bottom: 2rem;
+}
+
+#panels #panels-container .panel .panels-navigation {
+  justify-content: space-between;
+  color: $primary;
+}
+.anchor {
+  &:hover {
+    color: $primary;
+  }
 }
 
 #masthead {
