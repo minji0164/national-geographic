@@ -109,13 +109,20 @@
   display: block;
 }
 #panel-2 {
-  background: $bg;
+  background-image: url(../../images/main/work-bg.PNG);
+  background-repeat: no-repeat; /* 이미지 반복 안 되도록 설정 */
+  background-size: cover; /* 이미지를 오브젝트핏으로 설정하여 커버하도록 설정 */
 
   .txt-btn-wrap {
-    @include posY;
+    @include posXY;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 188px;
+    gap: 60px;
+  }
+
+  .txt-wrap1 {
+    text-align: center;
   }
   .mini-tit {
     color: $primary;
@@ -135,47 +142,55 @@
   }
 
   .works {
+    padding: 0 80px;
+    width: 100%;
     height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 4px;
 
     ul {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
     }
 
     .w-a {
+      display: block;
       position: relative;
 
       &:hover {
-        .txt-wrap {
-          color: $txt-op-h;
+        .txt-wrap2 {
+          // color: $txt-op-h;
+          color: $txtDefult-w;
         }
-        img {
-          opacity: 0.8;
+        .w-vd {
+          filter: brightness(80%);
         }
       }
     }
 
     img {
-      opacity: 0.6;
+      filter: brightness(60%);
       object-fit: cover;
-      width: 500px;
-      height: 304px;
-      transition: opacity 0.3s;
+      width: 450px;
+      height: 220px;
+    }
+    .w-vd {
+      filter: brightness(60%);
+      object-fit: cover;
+      width: 450px;
+      height: 220px;
     }
 
-    .txt-wrap {
+    .txt-wrap2 {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: 5px;
-      padding: 30px 40px;
+      padding: 20px 25px;
       position: absolute;
-      left: 0;
       bottom: 0;
       color: $txt-op;
       transition: all 0.3s;

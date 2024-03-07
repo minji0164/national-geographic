@@ -342,7 +342,6 @@ body {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  text-align: left;
 }
 
 #panels #panels-container .panel img {
@@ -593,15 +592,22 @@ body {
 }
 
 #panel-2 {
-  background: #0a0a0a;
+  background-image: url(../../images/main/work-bg.PNG);
+  background-repeat: no-repeat; /* 이미지 반복 안 되도록 설정 */
+  background-size: cover; /* 이미지를 오브젝트핏으로 설정하여 커버하도록 설정 */
 }
 #panel-2 .txt-btn-wrap {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 188px;
+  gap: 60px;
+}
+#panel-2 .txt-wrap1 {
+  text-align: center;
 }
 #panel-2 .mini-tit {
   color: #ffcc00;
@@ -620,51 +626,59 @@ body {
   width: 368px;
 }
 #panel-2 .works {
+  padding: 0 80px;
+  width: 100%;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 4px;
 }
 #panel-2 .works ul {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 #panel-2 .works .w-a {
+  display: block;
   position: relative;
 }
-#panel-2 .works .w-a:hover .txt-wrap {
-  color: rgba(255, 255, 255, 0.8);
+#panel-2 .works .w-a:hover .txt-wrap2 {
+  color: #fff;
 }
-#panel-2 .works .w-a:hover img {
-  opacity: 0.8;
+#panel-2 .works .w-a:hover .w-vd {
+  filter: brightness(80%);
 }
 #panel-2 .works img {
-  opacity: 0.6;
+  filter: brightness(60%);
   -o-object-fit: cover;
      object-fit: cover;
-  width: 500px;
-  height: 304px;
-  transition: opacity 0.3s;
+  width: 450px;
+  height: 220px;
 }
-#panel-2 .works .txt-wrap {
+#panel-2 .works .w-vd {
+  filter: brightness(60%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 450px;
+  height: 220px;
+}
+#panel-2 .works .txt-wrap2 {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 5px;
-  padding: 30px 40px;
+  padding: 20px 25px;
   position: absolute;
-  left: 0;
   bottom: 0;
   color: rgba(255, 255, 255, 0.6);
   transition: all 0.3s;
 }
-#panel-2 .works .txt-wrap .kate {
+#panel-2 .works .txt-wrap2 .kate {
   font-size: 12px;
 }
-#panel-2 .works .txt-wrap .tit {
+#panel-2 .works .txt-wrap2 .tit {
   margin-top: 5px;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
 }/*# sourceMappingURL=comm.css.map */

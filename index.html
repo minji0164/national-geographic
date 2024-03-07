@@ -115,7 +115,7 @@
                   <div class="col-6 d-flex flex-column">
                     <div class="inner">
                       <div class="txt-btn-wrap">
-                        <div class="txt-wrap">
+                        <div class="txt-wrap1">
                           <span class="mini-tit">DISNEY +</span>
                           <h2 class="tit">
                             <span>Shows</span>
@@ -141,11 +141,22 @@
                       <ul>
                         <li>
                           <a class="w-a" href="#">
+                            <video
+                              class="w-vd video1"
+                              loop
+                              muted="muted"
+                              poster="./images/main/work1.png"
+                              src="./images/main/work1.mp4"
+                              onmouseover="playVideo('.video1')"
+                              onmouseout="pauseVideo('.video1')"
+                            ></video>
                             <img
                               src="./images/main/work1.png"
-                              alt="SOCIETY-빙판길 구조대"
+                              style="display: none"
+                              onmouseover="showPoster('.video1')"
+                              alt="poster"
                             />
-                            <div class="txt-wrap">
+                            <div class="txt-wrap2">
                               <span class="kate">SOCIETY</span>
                               <strong class="tit">빙판길 구조대</strong>
                             </div>
@@ -153,11 +164,22 @@
                         </li>
                         <li>
                           <a class="w-a" href="#">
+                            <video
+                              class="w-vd video2"
+                              loop
+                              muted="muted"
+                              poster="./images/main/work2.png"
+                              src="./images/main/work2.mp4"
+                              onmouseover="playVideo('.video2')"
+                              onmouseout="pauseVideo('.video2')"
+                            ></video>
                             <img
                               src="./images/main/work2.png"
-                              alt="ANIMAL / NATURE-유럽의 숨겨진 비밀"
+                              style="display: none"
+                              onmouseover="showPoster('.video2')"
+                              alt="poster"
                             />
-                            <div class="txt-wrap">
+                            <div class="txt-wrap2">
                               <span class="kate">ANIMAL / NATURE</span>
                               <strong class="tit">유럽의 숨겨진 비밀</strong>
                             </div>
@@ -166,10 +188,10 @@
                         <li>
                           <a class="w-a" href="#">
                             <img
-                              src="./images/main/work3.png"
+                              src="./images/main/work3.jpg"
                               alt="NATURE / DOCUMENTARY-진짜 벅스 라이프"
                             />
-                            <div class="txt-wrap">
+                            <div class="txt-wrap2">
                               <span class="kate">NATURE / DOCUMENTARY</span>
                               <strong class="tit">진짜 벅스 라이프</strong>
                             </div>
@@ -181,11 +203,11 @@
                           <a class="w-a" href="#">
                             <img
                               src="./images/main/work4.png"
-                              alt="NATURE-잭 랜들의 용감한 모험"
+                              alt="NATURE-범고래 VS 백상아리"
                             />
-                            <div class="txt-wrap">
+                            <div class="txt-wrap2">
                               <span class="kate">NATURE</span>
-                              <strong class="tit">잭 랜들의 용감한 모험</strong>
+                              <strong class="tit">범고래 VS 백상아리</strong>
                             </div>
                           </a>
                         </li>
@@ -195,7 +217,7 @@
                               src="./images/main/work5.png"
                               alt="ANIMAL / NATURE-인크레더블 동물 여행"
                             />
-                            <div class="txt-wrap">
+                            <div class="txt-wrap2">
                               <span class="kate">ANIMAL / NATURE</span>
                               <strong class="tit">인크레더블 동물 여행</strong>
                             </div>
@@ -205,11 +227,13 @@
                           <a class="w-a" href="#">
                             <img
                               src="./images/main/work6.png"
-                              alt="SCIENCE-거대한 기계들"
+                              alt="HISTORY-나일강에 잠겨 있는 피라미드"
                             />
-                            <div class="txt-wrap">
-                              <span class="kate">SCIENCE</span>
-                              <strong class="tit">거대한 기계들</strong>
+                            <div class="txt-wrap2">
+                              <span class="kate">HISTORY</span>
+                              <strong class="tit"
+                                >나일강에 잠겨 있는 피라미드</strong
+                              >
                             </div>
                           </a>
                         </li>

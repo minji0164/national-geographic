@@ -45,3 +45,22 @@ tween = gsap.to(panels, {
     end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
   },
 });
+
+function playVideo(videoClass) {
+  var video = document.querySelector(videoClass); // 클래스로 비디오 요소 찾기
+  video.play();
+}
+
+function pauseVideo(videoClass) {
+  var video = document.querySelector(videoClass); // 클래스로 비디오 요소 찾기
+  video.pause();
+  video.currentTime = 0;
+  video.style.display = "none"; // 비디오를 숨깁니다.
+  video.nextElementSibling.style.display = "block"; // 다음 형제 요소를 표시합니다. (포스터 이미지)
+}
+
+function showPoster(videoClass) {
+  var video = document.querySelector(videoClass); // 클래스로 비디오 요소 찾기
+  video.style.display = "block"; // 비디오를 표시합니다.
+  video.nextElementSibling.style.display = "none"; // 다음 형제 요소를 숨깁니다. (포스터 이미지)
+}
