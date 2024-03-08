@@ -51,6 +51,7 @@ function playVideo(videoClass) {
   video.play();
 }
 
+// panel2 video hover
 function pauseVideo(videoClass) {
   var video = document.querySelector(videoClass); // 클래스로 비디오 요소 찾기
   video.pause();
@@ -64,3 +65,16 @@ function showPoster(videoClass) {
   video.style.display = "block"; // 비디오를 표시합니다.
   video.nextElementSibling.style.display = "none"; // 다음 형제 요소를 숨깁니다. (포스터 이미지)
 }
+
+// panel3 swiper
+var swiper = new Swiper(".swiper", {
+  effect: "cards",
+  grabCursor: true,
+  initialSlide: 2,
+  speed: 500,
+  loop: true,
+  rotate: true,
+  mousewheel: {
+    invert: false,
+  },
+});

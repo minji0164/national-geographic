@@ -115,3 +115,12 @@
 @mixin kate {
   font-size: 12px;
 }
+
+@mixin m-h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+@mixin m-month {
+  font-size: 40px;
+  font-weight: 700;
+}

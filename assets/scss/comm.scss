@@ -172,6 +172,10 @@ body {
     -webkit-transition: ease-out 0.5s;
     -moz-transition: ease-out 0.5s;
   }
+  .btn:hover {
+    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+    animation: gelatine 0.5s 1;
+  }
 
   .btn.btn-border-1::after,
   .btn.btn-border-1::before {
