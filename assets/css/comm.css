@@ -596,7 +596,7 @@ body {
 }
 
 #panel-2 {
-  background-image: url(../../images/main/work-bg.PNG);
+  background-image: url(https://github.com/minji0164/national-geographic/blob/main/images/main/work-bg.png?raw=true);
   background-repeat: no-repeat; /* 이미지 반복 안 되도록 설정 */
   background-size: cover; /* 이미지를 오브젝트핏으로 설정하여 커버하도록 설정 */
 }
