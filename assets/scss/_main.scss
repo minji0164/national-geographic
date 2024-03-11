@@ -461,9 +461,13 @@
 }
 //-------------------------------------------------------
 #panel-4 {
-  background: #000;
+  // background: #000;
+  background-repeat: no-repeat; /* 이미지 반복 안 되도록 설정 */
+  background-size: cover;
+  background-image: url(../../images/main/store-bg.jpg);
 
   .wrapper {
+    gap: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -481,7 +485,7 @@
 
     padding: 2rem 1rem;
     background-color: #fff;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
     transition: 0.5s ease-in-out;
   }
 
@@ -497,11 +501,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 176, 155, 0.5),
-      rgba(150, 201, 61, 1)
-    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), $primary);
     z-index: 2;
     transition: 0.5s all;
     opacity: 0;
@@ -512,6 +512,7 @@
   }
 
   .card img {
+    filter: brightness(80%);
     position: absolute;
     top: 0;
     left: 0;
@@ -537,23 +538,32 @@
 
   .text-h1 {
     margin: 0;
+    @include m-month;
   }
 
   .text-p {
-    letter-spacing: 1px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    margin-top: 18px;
+    margin-bottom: 30px;
   }
 
   .link-a {
-    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 20px;
     background-color: #fff;
     color: #000;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    width: auto;
+
+    .ico {
+      font-size: 18px;
+    }
   }
 
   .link-a:hover {
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
   }
 }
