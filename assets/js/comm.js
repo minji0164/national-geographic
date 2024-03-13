@@ -87,7 +87,7 @@ const expand = (item, i) => {
     if (i === ind) return;
     it.clicked = false;
     // 확장되지 않은 요소에 대해 블러 효과를 추가합니다.
-    it.querySelector(".txt-box").style.filter = "blur(8px)";
+    it.querySelector(".txt-box").style.filter = "blur(12px)";
   });
 
   // 아이템의 확장 상태를 변경합니다.
@@ -96,7 +96,7 @@ const expand = (item, i) => {
   // 클릭된 아이템에 대해서는 블러 효과를 제거합니다.
   item.querySelector(".txt-box").style.filter = item.clicked
     ? "blur(0)"
-    : "blur(8px)";
+    : "blur(12px)";
 
   // GSAP를 사용하여 아이템의 너비를 조정합니다.
   gsap.to(items, {

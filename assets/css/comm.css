@@ -1093,11 +1093,17 @@ body {
   overflow: hidden;
   color: #212126;
 }
+#panel-5 .item:nth-child(1) {
+  width: 330px;
+}
+#panel-5 .item:nth-child(1) .txt-box {
+  filter: blur(0px);
+}
 #panel-5 .txt-box {
   overflow: inherit;
   width: 280px;
   margin-top: 64px;
-  filter: blur(8px);
+  filter: blur(12px);
   transition: all 0.3s;
 }
 #panel-5 .txt-box .tit {

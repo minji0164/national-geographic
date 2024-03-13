@@ -479,10 +479,8 @@
     position: relative;
     width: 380px;
     height: 530px;
-
     display: flex;
     align-items: flex-end;
-
     padding: 2rem 1rem;
     background-color: #fff;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
@@ -649,13 +647,20 @@
     cursor: pointer;
     overflow: hidden;
     color: $txtDefult-b;
+
+    &:nth-child(1) {
+      .txt-box {
+        filter: blur(0px);
+      }
+      width: 330px;
+    }
   }
 
   .txt-box {
     overflow: inherit;
     width: 280px;
     margin-top: 64px;
-    filter: blur(8px);
+    filter: blur(12px);
     transition: all 0.3s;
     .tit {
       @include md-tit;
