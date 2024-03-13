@@ -78,3 +78,42 @@ var swiper = new Swiper(".swiper", {
     invert: false,
   },
 });
+
+//panel5
+const items = document.querySelectorAll(".item");
+
+const expand = (item, i) => {
+  items.forEach((it, ind) => {
+    if (i === ind) return;
+    it.clicked = false;
+    // 확장되지 않은 요소에 대해 블러 효과를 추가합니다.
+    it.querySelector(".txt-box").style.filter = "blur(8px)";
+  });
+
+  // 아이템의 확장 상태를 변경합니다.
+  item.clicked = !item.clicked;
+
+  // 클릭된 아이템에 대해서는 블러 효과를 제거합니다.
+  item.querySelector(".txt-box").style.filter = item.clicked
+    ? "blur(0)"
+    : "blur(8px)";
+
+  // GSAP를 사용하여 아이템의 너비를 조정합니다.
+  gsap.to(items, {
+    width: item.clicked ? "125px" : "125px",
+    duration: 0.3,
+    ease: "power2",
+  });
+
+  gsap.to(item, {
+    width: item.clicked ? "330px" : "125px",
+    duration: 0.3,
+    ease: "power2",
+  });
+};
+
+items.forEach((item, i) => {
+  // 각 아이템의 초기 클릭 상태를 설정합니다.
+  item.clicked = false;
+  item.addEventListener("click", () => expand(item, i));
+});

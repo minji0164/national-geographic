@@ -415,12 +415,12 @@ body {
 
 #content ::-moz-selection {
   background-color: #ffcc00;
-  color: #000;
+  color: #212126;
 }
 
 #content ::selection {
   background-color: #ffcc00;
-  color: #000;
+  color: #212126;
 }
 #content .btn {
   position: relative;
@@ -1057,4 +1057,55 @@ body {
 }
 #panel-5 .btn-width {
   width: 185px;
+}
+#panel-5 .group {
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  gap: 12px;
+}
+#panel-5 .ico-box {
+  width: 74px;
+  height: 74px;
+  background: #ffcc00;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#panel-5 .icon {
+  font-size: 40px;
+  color: #212126;
+}
+#panel-5 .item {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  width: 125px;
+  height: 436px;
+  background-position: center;
+  background-size: 75vh;
+  margin: 0;
+  padding: 25px;
+  border-radius: 20px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  color: #212126;
+}
+#panel-5 .txt-box {
+  overflow: inherit;
+  width: 280px;
+  margin-top: 64px;
+  filter: blur(8px);
+  transition: all 0.3s;
+}
+#panel-5 .txt-box .tit {
+  font-size: 22px;
+  font-weight: 700;
+}
+#panel-5 .txt-box .con {
+  margin-top: 20px;
+  width: 100%;
+  height: 120px;
 }/*# sourceMappingURL=comm.css.map */
