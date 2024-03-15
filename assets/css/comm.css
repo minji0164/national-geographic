@@ -1316,6 +1316,11 @@ body {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   height: 100%;
+  transition: all 0.3s;
+}
+#stories .letter-box button:hover {
+  background: #ffcc00;
+  color: #212126;
 }
 #stories .sub-news {
   display: flex;

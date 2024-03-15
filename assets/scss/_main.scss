@@ -816,6 +816,12 @@
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
       height: 100%;
+      transition: all 0.3s;
+
+      &:hover {
+        background: $primary;
+        color: $txtDefult-b;
+      }
     }
   }
 
