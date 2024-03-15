@@ -1200,18 +1200,21 @@ body {
   height: 120px;
 }
 
-#stories .tit-box {
+#stories .tit-wrap {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 20px;
   padding: 150px 0 100px;
 }
-#stories .tit-box .tit {
+#stories .tit-wrap .mini-tit {
+  color: #ffcc00;
+}
+#stories .tit-wrap .tit {
   font-size: 60px;
   font-weight: 700;
 }
-#stories .tit-box .con {
+#stories .tit-wrap .con {
   color: rgba(255, 255, 255, 0.8);
 }
 #stories .main-news {

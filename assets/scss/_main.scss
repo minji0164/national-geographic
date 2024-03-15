@@ -685,12 +685,16 @@
 }
 //-------------------------------------------------------
 #stories {
-  .tit-box {
+  .tit-wrap {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 20px;
     padding: 150px 0 100px;
+
+    .mini-tit {
+      color: $primary;
+    }
 
     .tit {
       @include tit;
