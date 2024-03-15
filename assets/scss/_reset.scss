@@ -92,6 +92,12 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type="email" i] {
+  padding-block: 0;
+  padding-inline: 0;
+  border-width: 0;
+  outline: none; /* 포커스 표시 없애기 */
+}
 
 input {
   &[type="text"],
@@ -138,10 +144,11 @@ body {
   background: $bg;
 }
 
-button {
+button,
+input {
   font-size: 16px;
   font-weight: 700;
-  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 /* desktop */
@@ -161,7 +168,7 @@ button {
 a {
   color: $txtDefult-w;
   text-decoration: none;
-  line-height: 1;
+  line-height: 1.5;
 
   &:active,
   &:hover {
