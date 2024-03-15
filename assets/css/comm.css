@@ -97,6 +97,13 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=email i] {
+  padding-block: 0;
+  padding-inline: 0;
+  border-width: 0;
+  outline: none; /* 포커스 표시 없애기 */
+}
+
 input[type=text], input[type=password], input[type=submit], input[type=search] {
   -webkit-appearance: none;
   border-radius: 0;
@@ -126,13 +133,14 @@ body {
   line-height: 1.5;
   font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #fff;
-  background: #0a0a0a;
+  background: #000;
 }
 
-button {
+button,
+input {
   font-size: 16px;
   font-weight: 700;
-  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 /* desktop */
@@ -150,7 +158,7 @@ button {
 a {
   color: #fff;
   text-decoration: none;
-  line-height: 1;
+  line-height: 1.5;
 }
 a:active, a:hover {
   text-decoration: none;
@@ -394,6 +402,8 @@ body {
   z-index: 1000;
   font-size: 14px;
   background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 #masthead .hd-wrap {
   width: 100%;
@@ -1125,4 +1135,175 @@ body {
   margin-top: 20px;
   width: 100%;
   height: 120px;
+}
+
+#stories .tit-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 150px 0 100px;
+}
+#stories .tit-box .tit {
+  font-size: 60px;
+  font-weight: 700;
+}
+#stories .tit-box .con {
+  color: rgba(255, 255, 255, 0.8);
+}
+#stories .main-news {
+  border-radius: 20px;
+  height: 500px;
+  background: #151a20;
+}
+#stories .main-news .link {
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+#stories .main-news .link:hover img {
+  transform: scale(1.05);
+}
+#stories .main-news .txt-box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  width: 530px;
+}
+#stories .main-news .con-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#stories .main-news .kate,
+#stories .main-news .con,
+#stories .main-news .date-box {
+  color: rgba(255, 255, 255, 0.8);
+}
+#stories .main-news .tit {
+  font-size: 26px;
+  font-weight: 700;
+}
+#stories .main-news .tit span {
+  display: block;
+}
+#stories .main-news .img-box {
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 750px;
+  height: 100%;
+}
+#stories .main-news img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+#stories .letter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 37px;
+  margin-top: 50px;
+  padding: 40px 0;
+}
+#stories .letter-box p {
+  font-size: 18px;
+  font-weight: 300;
+  font-weight: 700;
+}
+#stories .letter-box form {
+  position: relative;
+  display: flex;
+  width: 380px;
+  height: 50px;
+}
+#stories .letter-box .box {
+  width: 100%;
+  height: 100%;
+}
+#stories .letter-box input {
+  color: #fff;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+}
+#stories .letter-box button {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 9px 25px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  height: 100%;
+}
+#stories .sub-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+#stories .news-wrap {
+  display: flex;
+  gap: 40px;
+}
+#stories .news {
+  overflow: hidden;
+  background: #151a20;
+  border-radius: 20px;
+  width: 400px;
+  height: 535px;
+}
+#stories .news a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+#stories .news a:hover img {
+  transform: scale(1.1);
+}
+#stories .news .img-box {
+  overflow: hidden;
+  height: 280px;
+}
+#stories .news img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100%;
+  height: 280px;
+  transition: transform 0.3s ease;
+}
+#stories .news .txt-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 35px 30px;
+}
+#stories .news .txt-box em,
+#stories .news .txt-box p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+#stories .news .tit {
+  font-size: 22px;
+  font-weight: 700;
+}
+#stories .more-btn {
+  margin: 100px 0;
 }/*# sourceMappingURL=comm.css.map */

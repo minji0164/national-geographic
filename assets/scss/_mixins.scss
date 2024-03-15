@@ -107,20 +107,26 @@
   font-weight: 700;
 }
 
-@mixin md-tit {
-  font-size: 22px;
+@mixin m-month {
+  font-size: 40px;
   font-weight: 700;
 }
 
-@mixin kate {
-  font-size: 12px;
+@mixin news-tit {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+@mixin md-tit {
+  font-size: 22px;
+  font-weight: 700;
 }
 
 @mixin m-h2 {
   font-size: 18px;
   font-weight: 300;
 }
-@mixin m-month {
-  font-size: 40px;
-  font-weight: 700;
+
+@mixin kate {
+  font-size: 12px;
 }
