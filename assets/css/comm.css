@@ -717,8 +717,11 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+#panel-2 .works li {
+  font-size: 0;
+}
 #panel-2 .works .w-a {
-  display: block;
+  display: inline;
   position: relative;
 }
 #panel-2 .works .w-a:hover .txt-wrap2 {
@@ -747,7 +750,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
   padding: 20px 25px;
   position: absolute;
   bottom: 0;
