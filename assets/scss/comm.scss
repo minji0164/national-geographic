@@ -233,6 +233,79 @@ body {
 }
 //---------------------------------------------------------------------------------
 #footer {
+  background: $bg2;
+
+  .goto-box {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+  }
+
+  .goto-ul {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding: 62px 0;
+  }
+
+  .link-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+
+    a {
+      color: $txt-op-h;
+    }
+  }
+
+  .etc-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding: 80px 0;
+  }
+
+  .etc-ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    li {
+      display: flex;
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        a {
+          background: $primary;
+        }
+        .fa-brands {
+          color: $txtDefult-b;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #fff;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+
+    .fa-brands {
+      transition: all 0.3s;
+    }
+  }
+
+  .copy {
+    color: $txt-op-h;
+    font-size: 14px;
+  }
 }
 //---------------------------------------------------------------------------------
 @import "main";
