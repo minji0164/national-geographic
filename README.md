@@ -7,7 +7,7 @@
 
 ## 🔗 Page link - [natgeokorea.com](https://minji0164.github.io/national-geographic/)
 
-![page](https://github.com/minji0164/meta/blob/main/page.gif?raw=true)
+![page](https://github.com/minji0164/national-geographic/blob/main/national.gif?raw=true)
 
 ## 💻 디자인 및 퍼블리싱 기간
 
